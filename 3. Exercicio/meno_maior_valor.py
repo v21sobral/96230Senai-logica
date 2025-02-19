@@ -11,6 +11,8 @@ multiplicacao = (numero_1 * numero_2)
 
 if numero_1 > numero_2:
     print(f"Esse é o maior número: {numero_1}")
+elif numero_1 == numero_2:
+    print(f"Os números: {numero_1} e {numero_2} são iguais.")
 else:
     print(f"Esse é o maior número: {numero_2}")
 
