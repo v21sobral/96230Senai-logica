@@ -4,7 +4,7 @@ os.system("clear")
 
 numero = int(input("Digite um numero para saber se é maior que 10: "))
 
-while numero < 11:
+while numero < 18:
     if numero < 10:
        print("Esse número é maior que 10")
        print("Aprendeu cabeção!?")
