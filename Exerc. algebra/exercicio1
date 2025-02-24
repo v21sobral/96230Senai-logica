@@ -53,7 +53,7 @@ R= V
    R= F OR F
    R= F
 
-10. ((NOT(V) OR F) AND (V AND NOT (F)) OR NOT(V OR F)
+10. ((NOT(V) OR F) AND (V AND NOT (F))) OR NOT(V OR F)
   
    R= (F AND V) OR F
    R= F OR F
