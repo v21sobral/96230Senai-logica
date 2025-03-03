@@ -14,12 +14,15 @@ match pagamento:
         produto_debito = produto - desconto
         print(f"Valor de {produto:.2f} pago à vista com desconto de 10%: R$ {produto_debito:.2f}")
     case 2:
-        parcelamento = int(input("Digite o número de parcelas até 6x: "))
-        parcela = produto / parcelamento
-        if parcelamento > 6 or parcelamento < 1:
-            print("Operção inválida! Você só pode dividir em até 6x!")      
-        else:
-            print(f"O valor de {produto} em {parcelamento}x ficará em parcelas mensais de: R$ {parcela:.2f}")
+        parcelamento = int(input("\nDigite o número de parcelas até 6x: "))
+        while parcelamento > 6 or parcelamento < 1:
+            print("Operação inválida!")
+            parcelamento = int(input("\nDigite o número de parcelas até 6x: "))
+        parcela = produto / parcelamento    
+        print(f"O valor de {produto} em {parcelamento}x ficará em parcelas mensais de: R$ {parcela:.2f}")
+
+                    
+        
     case _:
         print("Opção inválida!")
 
