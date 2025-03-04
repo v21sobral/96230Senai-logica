@@ -1,9 +1,11 @@
 import os
 os.system("clear")
 
-numero_um = float(input("Digite um número: "))
+print("Calculadora")
+
+numero_um,numero_dois = float(input("Digite um número: ").split(" "))
 operacao = input("Você deseja (+ - * /)?:")
-numero_dois = float(input("Digite um número: "))
+#numero_dois = float(input("Digite um número: "))
 
 
 match operacao:

@@ -17,23 +17,23 @@ match genero_usuario:
        imc_m = (peso_usuario) / (altura_usuario * altura_usuario)
        if imc_m > 18.4 and imc_m < 25:
           print(f"O seu índice de massa corpóreo é {imc_m:.1f} e está no peso ideal.")
-       if imc_m > 25 and imc_m < 30:
+       elif imc_m > 25 and imc_m < 30:
           print(f"O seu índice de massa corpóreo é {imc_m:.1f} e você está com sobrepeso.")
-       if imc_m >= 30:
+       elif imc_m >= 30:
           print(f"O seu índice de massa corpóreo é {imc_m:.1f} e você está obeso.")
-       if imc_m <= 18.4:
+       elif imc_m <= 18.4:
           print(f"O seu índice de massa corpóreo é {imc_m:.1f} e você está abaixo do peso.")
 
     case "F":
-      print("Feminino")
+      print("Feminino ")
       imc_f = (peso_usuario) / (altura_usuario * altura_usuario)
       if imc_f > 18.5 and imc_f < 25:
          print(f"O seu índice de massa corpóreo é {imc_f:.1f} e está no peso ideal.")
-      if imc_f > 24.9 and imc_f < 30:
+      elif imc_f > 24.9 and imc_f < 30:
          print(f"O seu índice de massa corpóreo é {imc_f:.1f} e você está com sobrepeso.")
-      if imc_f >= 30:
+      elif imc_f >= 30:
          print(f"O seu índice de massa corpóreo é {imc_f:.1f} e você está obeso.")
-      if imc_f <= 18.5:
+      elif imc_f <= 18.5:
          print(f"O seu índice de massa corpóreo é {imc_f:.1f} e você está abaixo do peso.")
 
     case _:
