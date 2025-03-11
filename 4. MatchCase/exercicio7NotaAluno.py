@@ -11,9 +11,7 @@ media_aluno = (nota1_aluno + nota2_aluno)/2
 
 if media_aluno >= 9:
     print(f"(A) Parabéns! Você foi aprovado com média: {media_aluno:.1f}")
-
-
-if media_aluno < 4 :
+elif media_aluno < 4 :
     print(f"(E) Você foi reprovado com média: {media_aluno:.1f}")
     print("Você terá que repipitir a matéria no próximo ano.")
 elif media_aluno < 6 :
