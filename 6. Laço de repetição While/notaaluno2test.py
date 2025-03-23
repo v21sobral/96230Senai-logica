@@ -7,9 +7,9 @@ print("Bem-vindo ao sistema de cálculo de média!")
 
 # Solicita as três notas, garantindo que estejam entre 0 e 10
 while True:
-    nota1 = input("Digite a primeira nota: ")
-    if nota1.replace('.', '', 1).isdigit():  # Verifica se é um número válido
-        nota1 = float(nota1)
+    nota1 = float(input("Digite a primeira nota: "))
+    if nota1:  # Verifica se é um número válido
+        
         if 0 <= nota1 <= 10:
             break
         else:
@@ -18,9 +18,8 @@ while True:
         print("Entrada inválida! Por favor, insira um número.")
 
 while True:
-    nota2 = input("Digite a segunda nota: ")
-    if nota2.replace('.', '', 1).isdigit():  # Verifica se é um número válido
-        nota2 = float(nota2)
+    nota2 = float(input("Digite a segunda nota: "))
+    if nota2:  # Verifica se é um número válido
         if 0 <= nota2 <= 10:
             break
         else:
@@ -29,9 +28,9 @@ while True:
         print("Entrada inválida! Por favor, insira um número.")
 
 while True:
-    nota3 = input("Digite a terceira nota: ")
-    if nota3.replace('.', '', 1).isdigit():  # Verifica se é um número válido
-        nota3 = float(nota3)
+    nota3 = float(input("Digite a terceira nota: "))
+    if nota3:  # Verifica se é um número válido
+
         if 0 <= nota3 <= 10:
             break
         else:
