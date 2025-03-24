@@ -1,6 +1,6 @@
 import os
 os.system("cls||clear")
-import 
+
 
 logincadastrado= "Victor"
 senhacadastrada= "123456w"
