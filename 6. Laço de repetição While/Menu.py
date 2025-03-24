@@ -1,74 +1,40 @@
 import os
 os.system("cls||clear")
 
-print("""          Restaurante restaurante
-      
-__________________Cardápio____________________
-Código     |       Prato      |         Valor
-1          |      Picanha     |       R$ 25,00
-2          |      Lasanha     |       R$ 20,00
-3          |    Strogonoff    |       R$ 18,00
-4          |  Bife Acebolado  |       R$ 15,00
-5          |    Pão com ovo   |       R$ 100,00
-""")
+cardapio = {
+    1: {"Prato": "Picanha","Valor": 25.00},
+    2: {"Prato": "Lasanha","Valor": 20.00},
+    3: {"Prato": "Strogonoff","Valor": 18.00},
+    4: {"Prato": "Bife Acebolado","Valor": 15.00},
+    5: {"Prato": "Pão com ovo", "Valor": 100.00}
+}
 
-picanha = "R$ 25,00"
-lasanha = "R$ 20,00"
-strogonoff = "R$ 18,00"
-bife_acebolado = "R$ 15,00"
-pao_com_ovo = "R$ 100,00"
+total_a_pagar = 0.0
+while True:
+    # Exibir o cardápio
+    print("Código |     Prato     | Valor")
+    for codigo, detalhes in cardapio.items():
+        print(f"  {codigo}.     {detalhes['Prato']}: R$ {detalhes['Valor']:.2f}")
 
+    # Pedir ao usuário para escolher um prato
+    codigo = int(input("\nDigite o código do prato desejado: "))
 
-codigo = (input("Digite o cógigo da refeição desejada: "))
+    # Verificar se o código é válido
+    if codigo:  # Verifica se a entrada é um número
+        if codigo in cardapio:
+            prato = cardapio[codigo]["Prato"]
+            valor = cardapio[codigo]["Valor"]
+            total_a_pagar += valor
+            print(f"\nVocê escolheu {prato} por R$ {valor:.2f}")
+        else:
+            print("Código inválido. Por favor, tente novamente.")
+    else:
+        print("Entrada inválida. Por favor, digite um número.")
 
+    # Perguntar se o usuário deseja escolher outro prato
+    continuar = input("\nDeseja escolher outro prato? (s/n): ").upper()
+    if continuar != 'S':
+        break
 
-
-
-
-match codigo:
-    case "1":
-     print("Voce escolheu: Picanha")
-     confirmacodigo =input("Confirmar o pedido?(S/N): ").upper
-     while confirmacodigo == "N":
-        codigo = (input("Digite o cógigo da refeição desejada: "))
-     if confirmacodigo == "S":
-        print("Total a pagar:",picanha)
-    case "2":
-     print("Voce escolheu: Lasanha")
-     confirmacodigo =(input("Confirmar o pedido?(S/N): ")).upper
-     while confirmacodigo == "N":
-        codigo = (input("Digite o cógigo da refeição desejada: "))
-     if confirmacodigo == "S":
-        print("Total a pagar:",lasanha)
-    case "3":
-     print("Voce escolheu: Strogonoff")
-     confirmacodigo =(input("Confirmar o pedido?(S/N): ")).upper
-     while confirmacodigo == "N":
-        codigo = (input("Digite o cógigo da refeição desejada: "))
-     if confirmacodigo == "S":
-        print("Total a pagar:",strogonoff)
-    case "4":
-     print("Voce escolheu: Bife Acebolado")
-     confirmacodigo =(input("Confirmar o pedido?(S/N): ")).upper
-     while confirmacodigo == "N":
-        codigo = (input("Digite o cógigo da refeição desejada: "))
-     if confirmacodigo == "S":
-        print("Total a pagar:",bife_acebolado)
-    case "5":
-     print("Voce escolheu: Pão com ovo")
-     confirmacodigo =(input("Confirmar o pedido?(S/N): ")).upper
-     while confirmacodigo == "N":
-        codigo = (input("Digite o cógigo da refeição desejada: "))
-     if confirmacodigo == "S":
-        print("Total a pagar:",pao_com_ovo)
-
-      
-       
-    
-  
-     
-
-     
-    
-
-    
+# Mostrar o total a pagar
+print(f"\nTotal a pagar: R$ {total_a_pagar:.2f}")
