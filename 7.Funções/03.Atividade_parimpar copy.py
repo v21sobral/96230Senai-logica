@@ -2,7 +2,9 @@ import os
 os.system("cls || clear")
 
 def identificar_par_impar(numero):
-    if numero % 2 == 0:
+    if numero == 0:
+        return "Nem par, nem ímpar."
+    elif numero % 2 == 0:
         return "Par"
     else:
         return "Ímpar"

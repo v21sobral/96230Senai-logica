@@ -1,16 +1,14 @@
 import os
 os.system("cls || clear")
-import time
 
-def taboada(numero):
-    resultados = 
-    for i in range(11):
-        resultados += f"{numero} x {i} = {numero * i}\n"
-    return resultados
-    
 
+def tabuada(numero):
+     for t in range(11):
+          print(f"{numero} x {t} = {numero * t}")
+      
+print(":::::Tabuada:::::")
 numero = int(input("Digite um número para saber sua tabuada: "))
-mostra_taboada = taboada(numero)
+tabuada(numero)
 
-print(f"Tabuada do número: {numero}")
-print(mostra_taboada)
+
+

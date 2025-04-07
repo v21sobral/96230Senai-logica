@@ -4,13 +4,12 @@ os.system("cls || clear")
 
 def positivo_negativo(numero):
     if numero > 0:
-        return "Positivo"
+       print(f"O numero {numero} é positivo")
+    elif numero == 0:
+       print(f"O número {numero} é neutro.")
     else:
-        return "Negativo"
+       print(f"O numero {numero} é negativo")
+        
 
-
-numero = int(input("Digite um número para saber se é par/ímpar: "))
-
-# Chama a função e exibe o resultado
+numero = int(input("Digite um número para saber se o número é positivo/negativo: "))
 resultado = positivo_negativo(numero)
-print(f"o número {numero} é: {resultado}")
