@@ -10,11 +10,16 @@ def media_aluno(media):
 def aprovacao_aluno(media):
       if media >= 7:
          return "Aprovado"
+      
       else:
          return "Reprovado"
-      
+
 nota1 = float(input("Digite a primeira nota: "))
-nota2 = float(input("Digite a segunda nota: "))
+if nota1 > 10:
+   print("Nota inválida")  
+nota2 = float(input("Digite a segunda nota: "))  
+if nota2 > 10:
+   print("Nota inválida")      
 media = media_aluno(nota1)
 aprovacao = aprovacao_aluno(media)
 print("\nSaiba a sua média")
