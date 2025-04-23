@@ -1,26 +1,35 @@
 import os
 os.system("cls || clear")
+lista_numero = []
+QUANTIDADE_NUMERO = 6
+print("DIGITE SEUS NÚMEROS")
 contadorpar = 0
 contadorimpar = 0
-lista_numero = []
-print("DIGITE SEUS NÚMEROS")
-for i in range(1, 7):
-    numero = int(input(f'Digite o {i}ª número: '))
+nemparnemimpar = 0
+
+for i in range(QUANTIDADE_NUMERO):
+    numero = int(input(f'Digite o {i+1}ª número: '))
     lista_numero.append(numero)
+
 def pares_impares(lista):
-    for i, numero in  enumerate(lista_numero,start=1):
+    contadorpar = 0
+    contadorimpar = 0
+    nemparnemimpar = 0
+    for i, numero in enumerate(lista, start=1):
         if numero == 0:
-            print(f"{numero} não é par nem ímpar.")
+            nemparnemimpar += 1
         elif numero % 2 == 0:
             contadorpar += 1
-            return "é par"
         elif numero % 2 != 0:
             contadorimpar += 1
-            return "é par"
+    return contadorpar, contadorimpar, nemparnemimpar
+
+contadorpar, contadorimpar, nemparnemimpar = pares_impares(lista_numero)
 
 print("")
-print(f"Numéro pares: {contadorpar}")
-print(f"Numéro impares: {contadorimpar}")
+print(f"Números pares: {contadorpar}")
+print(f"Números ímpares: {contadorimpar}")
+print(f"Números nem pares e nem ímpares: {nemparnemimpar}")
 
 
 

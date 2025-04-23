@@ -1,5 +1,6 @@
 import os
 os.system("cls || clear")
+import time
 
 
 
@@ -37,10 +38,11 @@ def login_func():
                 print(f"Bem-vindo(a), {login_tentativa} a sua rede antissocial!")
                 exit(0)  # Sai do programa após login bem-sucedido
             else:
-                # Se não encontrar correspondência, informa o erro
                 print("Login ou senha incorretos. Tente novamente.")
+                time.sleep(1)
+                os.system("cls || clear")  # Limpa a tela após erro
                 continue
-        
+
                  
 
 cadastrar_usuario()
