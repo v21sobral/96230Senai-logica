@@ -36,7 +36,7 @@ def login_func():
             if usuario["login"] == login_tentativa and usuario["senha"] == senha_tentativa:
                 print("Login bem-sucedido!")
                 print(f"Bem-vindo(a), {login_tentativa} a sua rede antissocial!")
-                exit(0)  # Sai do programa após login bem-sucedido
+                  # Sai do programa após login bem-sucedido
             else:
                 print("Login ou senha incorretos. Tente novamente.")
                 time.sleep(1)
