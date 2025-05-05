@@ -3,25 +3,32 @@ from dataclasses import dataclass
 os.system("cls || clear")
 
 @dataclass
-class Livro:
+class Autor:
     nome: str
-    autor: str
-    ano: int
     bibliografia: str
 
+
+
+@dataclass
+class Livro:
+    titulo: str
+    autor: Autor
+    ano: int
+
     def exibir_dados(self):
-        print(f"Nome: {self.nome} \nAutor: {self.autor} \nano: {self.ano} \nPreço: {self.bibliografia} \n\n")
+        print(f"Nome: {self.titulo} \nAno: {self.ano} \nAutor: {self.autor.nome} \n\n")
 
 lista_livros = []
 
 
 livros = Livro(
-                        nome = input("Digite o nome do livro: "), 
-                        autor = input("Digite o autor do livro: "),
+                        titulo = input("Digite o nome do livro: "), 
                         ano = int(input("Digite a ano do livro: ")),
-                        bibliografia = input("Digite o bibliografia do livro: ")
+                        autor = Autor(
+                         nome = input("Digite o autor do livro: "),
+                         bibliografia = input("Digite o bibliografia do livro: ")
                         )
-    
+)
 
 lista_livros.append(livros)
 print("")
@@ -31,7 +38,7 @@ print("")
 nome_arquivo = "Dados do livro.txt"
 with open(nome_arquivo, "a") as catalogo_livros:
     for livros in lista_livros:
-        catalogo_livros.write(f"{livros.nome}, {livros.autor}, {livros.ano}, {livros.bibliografia}\n")
+        catalogo_livros.write(f"{livros.titulo}, {livros.ano}, {livros.autor}\n")
 
 
 print("Exibindo os dados da lista")
