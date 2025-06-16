@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #000000 ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,9 +9,10 @@ body {
   }
   
   .container {
-    background: rgb(67, 114, 40);
-    color: #ffffff;
+    background: linear-gradient(135deg, #3bffde, #66a6ff, #0056b3);
+    color: #000000;
     padding: 2rem;
+    border: #003253 3px solid;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
@@ -29,8 +30,8 @@ body {
   button {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    border: none;
-    background-color: #007bff;
+    border: 1px;
+    background-color: #002c5c;
     color: white;
     border-radius: 5px;
     cursor: pointer;
