@@ -16,20 +16,40 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     text-align: center;
-    width: 300px;
+    width: 450px;
+    height: 450px;
   }
   
+  #tituloNotas {
+
+  margin-bottom: 5px; /* aumenta o espaço abaixo do título */
+  margin-top: 40px;
+}
+
   input {
-    width: 80%;
+    width: 30%;
     padding: 0.5rem;
     margin-top: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
+  #btnAdicionarNota {
+  background-color: #1b6e2e; /* Verde Bootstrap */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#btnAdicionarNota:hover {
+  background-color: #2db34a;
+}
   
   button {
     margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 5px 10px;
     border: 1px;
     background-color: #002c5c;
     color: white;
@@ -47,20 +67,31 @@ body {
   }
   
   #listaNotas {
+    color: #ffffff;
     list-style: none;
     padding: 0;
     margin: 1rem 0 0;
   }
   
   .aprovado {
-    color: green;
+    background-color: #01580f;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    
   }
   
   .recuperacao {
-    color: orange;
+    background-color: #d3cf00;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
   }
   
   .reprovado {
-    color: red;
+    background-color: #960000;
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
   }
   

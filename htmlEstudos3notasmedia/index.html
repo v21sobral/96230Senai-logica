@@ -9,10 +9,11 @@
 <body>
   <div class="container">
     <h1>Calculadora de Média</h1>
-    <p>Digite uma nota de cada vez (total de 3):</p>
-    <input type="number" id="notaInput" placeholder="Digite a nota" step="0.1" min="0" max="10" />
-    <button onclick="adicionarNota()">Adicionar Nota</button>
-    <button onclick="reiniciar()">Calcular novamente</button>
+    <p>_________________________________</p>
+    <p id="tituloNotas">Digite as 3 notas para saber sua média:</p>
+    <input type="number" id="notaInput" />
+    <br><button id="btnAdicionarNota">Add Nota</button>
+    <button onclick="reiniciar()">Calcular</button></br>
 
 
     <ul id="listaNotas"></ul>

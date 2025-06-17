@@ -26,6 +26,17 @@ function adicionarNota() {
   }
 }
 
+// Adiciona o evento de aprertar enter para adicionar a nota ou reiniciar
+notaInput.addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    if (notas.length < 3) {
+      adicionarNota();
+    } else {
+      reiniciar();
+    }
+  }
+});
+
 function atualizarListaNotas() {
   listaNotas.innerHTML = '';
   notas.forEach((n, i) => {
@@ -41,7 +52,7 @@ function calcularMedia() {
   let status = '';
   let classe = '';
 
-  if (media <= 4) {
+  if (media < 4) {
     status = 'Reprovado';
     classe = 'reprovado';
   } else if (media < 7) {
