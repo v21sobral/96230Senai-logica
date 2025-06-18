@@ -1,0 +1,61 @@
+  /* Estilos CSS para a calculadora */
+body {
+  font-family: cursive, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #4b4b4b;
+}
+.calculadora {
+    background: linear-gradient(160deg, #fffbc1, #e7c500, #3b330c);
+    color: #ffffff;
+    padding: 2rem;
+    border: #000000 3px ;
+    border-radius: 10px;
+    box-shadow: 0 10px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 300px;
+    height: 450px;
+
+}
+#visor {
+  width: 95%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #181818;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3px;
+}
+button {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  background: linear-gradient(80deg, #474747, #2c2c2c, #000000);
+  color: silver;
+  cursor: pointer;
+  
+}
+button:hover {
+  background: rgb(165, 165, 165);
+  color: #000000;
+}
+.operador {
+  background: #6b0000;
+  transition: 0.2s;
+}
+.operador:hover {
+  background: #be0000;
+}
+
