@@ -1,6 +1,7 @@
- // Função para adicionar um valor ao visor
+// Função para adicionar um valor ao visor
 function adicionar(valor) {
-  document.getElementById('visor').value += valor;
+  var visor = document.getElementById('visor');
+  visor.value += valor;
 }
 
 // Função para limpar o visor
@@ -18,11 +19,10 @@ function apagar() {
 function calcular() {
   var visor = document.getElementById('visor');
   try {
-    // Usa a função eval() para calcular o resultado
-    // Nota: eval() pode ser perigoso com entrada não confiável
-    visor.value = eval(visor.value);
+    let expressao = visor.value
+      .replace(/√([0-9.]+)/g, 'Math.sqrt($1)');
+    visor.value = eval(expressao);
   } catch (error) {
-    // Se houver um erro na expressão, mostra "Erro" no visor
     visor.value = 'Erro';
   }
 }

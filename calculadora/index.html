@@ -8,11 +8,18 @@
 
 <body> 
   <div class="calculadora">
+    <h1 id="calculate">Calculadora</h1>
     <!-- Visor da calculadora -->
     <input type="text" id="visor" readonly>
 
     <!-- Botões da calculadora -->
     <div class="botoes">
+      
+      <button class="operador" onclick="adicionar('√')">√</button>
+      <button class="operador" onclick="adicionar('aⁿ')">aⁿ</button>
+      <button class="operador" onclick="adicionar('(')">(</button>
+      <button class="operador" onclick="adicionar(')')">)</button>
+      
       <button onclick="limpar()">Limpar</button>
       <button onclick="apagar()">Apagar</button>
       <button onclick="adicionar('%')">%</button>
@@ -36,7 +43,8 @@
       <button onclick="adicionar('0')">0</button>
       <button onclick="adicionar('.')">.</button>
       <button onclick="calcular()" class="operador" style="grid-column: span 2;">=</button>
-   
+    </div>
+  </div>
   <script src="calculadora.js"></script>
 </body>
 </html>
